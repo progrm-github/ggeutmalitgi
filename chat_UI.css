@@ -1,0 +1,240 @@
+/*——————–
+ 吹き出しを作る
+——————–*/
+
+/* 全体のスタイル */
+* {
+  font-family: 'Noto Sans KR', sans-serif, 'Rampart One', cursive;
+}
+
+.kaiwa {
+  margin-bottom: 35px;
+}
+
+/* 左画像 */
+
+.kaiwa-img-left {
+  margin: 0;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-right: -70px;
+}
+
+/* 右画像 */
+
+.kaiwa-img-right {
+  margin: 0;
+  margin-right: 10px;
+  float: right;
+  width: 60px;
+  height: 60px;
+  margin-left: -70px;
+}
+
+.kaiwa figure img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin: 0;
+}
+
+/* 画像の下のテキスト */
+
+.kaiwa-img-description {
+  padding: 20px 0 0;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  bottom: 15px;
+}
+
+/* 左からの吹き出しテキスト */
+
+.kaiwa-text-right {
+  position: relative;
+  margin-left: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #eee;
+  margin-right: 20%;
+  float: left;
+}
+
+/* 右からの吹き出しテキスト */
+
+.kaiwa-text-left {
+  position: relative;
+  margin-right: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #9cd6e7;
+  margin-left: 20%;
+  float: right;
+}
+
+p.kaiwa-text {
+  margin: 0 0 20px;
+}
+
+p.kaiwa-text:last-child {
+  margin-bottom: 0;
+}
+
+/* 左の三角形を作る */
+
+.kaiwa-text-right:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  top: 10px;
+  left: -20px;
+}
+
+.kaiwa-text-right:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid #eee;
+  top: 10px;
+  left: -19px;
+}
+
+/* 右の三角形を作る */
+
+.kaiwa-text-left:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  top: 10px;
+  right: -20px;
+}
+
+.kaiwa-text-left:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid #9cd6e7;
+  top: 10px;
+  right: -19px;
+}
+
+/* 回り込み解除 */
+
+.kaiwa:after, .kaiwa:before {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#input_text {
+  resize: none;
+  float: left;
+  margin-right: 10px;
+}
+
+#chat-box {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+#record_btn, #submit_btn {
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+#record_btn, #submit_btn {
+  border-radius: 25px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #00bcd4;
+  transition: .4s;
+  border-bottom: solid 4px #627295;
+}
+
+#submit_btn:hover {
+  background: #00ff00;
+}
+
+#record_btn:hover {
+  background: #ff0000;
+}
+
+#record_btn:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  border-bottom: none;
+  /*線を消す*/
+}
+
+#submit_btn:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  border-bottom: none;
+  /*線を消す*/
+}
+
+::placeholder {
+  color: #ff0000;
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+/*トグル*/
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label.check {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    color: #969696;
+    border: 1px solid #a3a3a3;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+input[type="checkbox"]:checked + label.check {
+    border: 1px solid #4db4e4;
+    background-color: #4db4e4;
+}
+input[type="checkbox"] + label.check::before {
+    content: "OFF";
+    position: absolute;
+    top: 4px;
+    left: auto;
+    right: 6px;
+}
+input[type="checkbox"]:checked + label.check::before {
+    content: "ON";
+    position: absolute;
+    left: 6px;
+    right: auto;
+    color: #ffffff;
+}
+input[type="checkbox"] + label.check > div {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 22px;
+    border: 1px solid #a3a3a3;
+    border-radius: 3px;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+input[type="checkbox"]:checked + label.check > div {
+    border: 1px solid transparent;
+    left: 44px;
+}

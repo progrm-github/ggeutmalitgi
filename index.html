@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <meta property="og:title" content="끝말잇기">
+    <meta property="og:description" content="끝말잇기하는 사이트">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki 끝말잇기</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./font_icon/css/all.min.css">
+    <link rel="stylesheet" href="./chat_UI.css">
+</head>
+
+<body>
+<script src="./jquery-3.4.1.min.js"></script>
+<div id="chat-box">
+    <div class="kaiwa">
+        <figure class="kaiwa-img-left">
+            <img src="./icons/Wikipedia-logo-v2-ja.png" alt="no-img2">
+            <figcaption class="kaiwa-img-description">
+                끝말잇기 AI
+            </figcaption>
+        </figure>
+        <div class="kaiwa-text-right">
+            <p class="kaiwa-text">
+                사용법
+            <ul>
+                <li>
+                    위키페디아에 있는 단어 가능.
+                </li>
+                <li>
+                    기본적인 끝말잇기의 규칙과 같음.
+                </li>
+                <li>
+                    두음법칙 안됨.
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="form">
+    <textarea id="input_text" cols="30" rows="3" placeholder="「기」로 시작하는 말"></textarea>
+    <div id="buttons">
+        <button id="submit_btn"><i class="far fa-paper-plane"></i> <span id="submit_btn_text">전송</span></button>
+        <button id="record_btn"><i class="fas fa-microphone"></i> <span id="record_btn_text">음성인식</span></button>
+        <label class="check" for="check">
+            <div></div>
+        </label>
+    </div>
+</div>
+<script src="./siritori.js"></script>
+
+
+</body>
+
+</html>
