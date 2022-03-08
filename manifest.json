@@ -1,6 +1,6 @@
 {
-    "short_name": "Wiki しりとり",
-    "name": "Wikipedia しりとりAI",
+    "short_name": "Wiki 끝말잇기",
+    "name": "Wikipedia 끝말잇기AI",
     "icons": [
       {
         "src": "./icons/icon.png",
