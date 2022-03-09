@@ -201,17 +201,9 @@ $(function () {
             return false;
         }
     });
-    if (localStorage.getItem(dbName) != null) {
-        let isLoad = confirm("세이브 데이터가 있습니다\n사용할 경우에는「OK」\n삭제하고 다시 시작할 경우에는「취소」");
-        if (isLoad) {
-            ParseSaveData()
-        } else {
-            localStorage.removeItem(dbName)
-            say("「끝말잇기」", chatBox, wikiURL + "20287");
-        }
-    } else {
-        say("「끝말잇기」", chatBox, wikiURL + "20287");
-    }
+
+        say("「끝말잇기」", chatBox, "https://ko.wikipedia.org/wiki/%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0");
+
 
 })
 
@@ -514,7 +506,16 @@ function str_change(str, ran) {
     return r;
 }
 
-function say(text, element, link) {// Sayする関数
+function say(text, element, link) {// Sayする関数\
+    console.log(text);
+    if (text == "「Undefined」") {
+        alert("승리하셨습니다.");
+        window.location.reload();
+    }
+    if (text == "「Undefined Fantastic Object」") {
+        alert("승리하셨습니다.");
+        window.location.reload();
+    }
     if (link === undefined) {
         element.html(`${element.html()}<div class="kaiwa"><figure class="kaiwa-img-left"><img src="./icons/Wikipedia-logo-v2-ja.png" alt="no-img2"><figcaption class="kaiwa-img-description">끝말잇기 AI</figcaption></figure><div class="kaiwa-text-right"><p class="kaiwa-text">존재하지 않는 단어입니다.</p></div></div>`)
     } else {

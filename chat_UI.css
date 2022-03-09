@@ -130,8 +130,6 @@ p.kaiwa-text:last-child {
 
 #input_text {
   resize: none;
-  float: left;
-  margin-right: 10px;
 }
 
 #chat-box {
@@ -139,10 +137,6 @@ p.kaiwa-text:last-child {
   overflow-y: scroll;
 }
 
-#record_btn, #submit_btn {
-  margin-left: 10px;
-  margin-bottom: 50px;
-}
 
 #record_btn, #submit_btn {
   border-radius: 25px;
